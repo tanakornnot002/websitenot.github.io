@@ -1,0 +1,36 @@
+        * {
+            font-family: 'Kanit', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        
+        body {
+            background-image: linear-gradient(to right, #8360c3, #2ebf91);
+            /* background-image: url(https://wallpaperaccess.com/full/2825840.gif); */
+            /* background-image: url(https://wallpaperaccess.com/full/3976551.png); */
+            /* background-image: url(https://res.cloudinary.com/practicaldev/image/fetch/s--zmdziT2S--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3bxwssqls1j5cxmyosag.png); */
+            width: 100%;
+            height: 93vh;
+            /* background-repeat: repeat; */
+        }
+        
+        .nav-container {
+            max-width: 95vw;
+            height: 100%;
+            margin-top: 29px;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            /* background: yellow; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .content {
+            font-size: 25px;
+            /* background-color: #818181; */
+            margin: 1rem 30rem auto;
+            align-items: center;
+        }

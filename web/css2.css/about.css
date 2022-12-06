@@ -1,0 +1,204 @@
+body {
+    margin: 0px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.navigation {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    z-index: 200;
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 500ms ease-in-out;
+}
+
+.navigation.active {
+    clip-path: circle(75%);
+}
+
+.navigation .ham-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.navigation .ham-btn span {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 2px;
+    background: #f5f5f5;
+    transition: all 200ms ease-in-out;
+}
+
+.navigation .ham-btn span:nth-child(1) {
+    top: 30%;
+}
+
+.navigation .ham-btn span:nth-child(2) {
+    top: 50%;
+}
+
+.navigation .ham-btn span:nth-child(3) {
+    top: 70%;
+}
+
+.navigation.active .ham-btn span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.navigation.active .ham-btn span:nth-child(2) {
+    display: none;
+}
+
+.navigation.active .ham-btn span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.navigation .links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.navigation .links a {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.navigation .links a:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    height: 2px;
+    width: 0%;
+    background: tomato;
+    transition: all 300ms ease-in-out;
+}
+
+.navigation .links a:hover:after {
+    width: 100%;
+}
+
+
+/* ----------------------ตรงนี้จะเป็นหน้าเเกรของaboutme--------------------------------------------- */
+
+.two {
+    position: relative;
+    background-image: linear-gradient(rgba(221, 221, 221, 0.5), rgba(0, 0, 0, 0.20)), url(/images/);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1060px;
+}
+
+* .photo img {
+    margin-top: 5rem;
+    align-items: center;
+    width: fit-content;
+    height: 40vh;
+    /* width: 20vh; */
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.about {
+    margin: 5rem;
+    position: relative;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0px 0px #313131, 6px 6px #313131, 0px 0px #313131, 6px 6px #313131;
+}
+
+.about>* {
+    margin-bottom: 0.5rem;
+    color: black;
+}
+
+.about p {
+    color: black;
+    text-indent: 0.5cm;
+}
+
+.about p span {
+    font-weight: bolder;
+    color: #DB4A73;
+}
+
+.photo {
+    margin-left: 20rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+    .photo {
+        position: relative;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    .photo img {
+        margin-left: -18rem;
+        padding-top: 60px;
+        max-width: 150%;
+        height: 50%;
+    }
+    .about {
+        background-color: white;
+        box-shadow: 0px 0px #313131, 6px 6px #313131, 0px 0px #313131, 6px 6px #313131;
+    }
+    .about h3 {
+        font-size: 15px;
+        font-weight: bolder;
+    }
+    .about p {
+        color: black;
+        font-size: 13px;
+    }
+    .two {
+        height: 100%;
+        padding-bottom: 20px;
+    }
+}

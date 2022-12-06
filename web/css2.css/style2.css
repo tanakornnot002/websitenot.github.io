@@ -1,0 +1,16 @@
+.content {
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    background: rgb(34, 33, 33);
+}
+
+img {
+    width: fit-content;
+    height: 40vh;
+    animation: animate 3s linear infinite;
+}
+
+.about {
+    font-size: 20px;
+}
